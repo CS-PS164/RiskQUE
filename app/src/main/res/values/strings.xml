@@ -21,5 +21,142 @@
     <string name="mulai">Mulai</string>
     <string name="belum_punya_akun">Belum punya akun?</string>
 
+    <!-- Data for question -->
+    <string-array name="question.indonesia">
+        <item>Seberapa jauh pengetahuan Anda tentang konsep keuangan dan investasi?</item>
+        <item>Seberapa banyak pengalaman yang Anda miliki dengan produk investasi?</item>
+        <item>Berapa toleransi risiko atau kesediaan Anda untuk mengambil risiko keuangan?</item>
+        <item>Apa preferensi Anda ketika memegang aset berisiko?</item>
+        <item>Apa persepsi Anda tentang risiko pasar saham?</item>
+        <item>Di masa lalu, ketika mengalami kerugian investasi, tindakan apa yang Anda lakukan?</item>
+        <item>Dari seluruh aset Anda, berapa persen yang Anda rencanakan untuk diinvestasikan pada Aset Berkembang (ekuitas dan alternatif)?</item>
+        <item>Berapa lama jangka waktu rencana investasi Anda?</item>
+    </string-array>
 
+    <string-array name="question.english">
+        <item>How knowledgeable are you about financial and investment concepts?</item>
+        <item>How much experience do you have with investment products?</item>
+        <item>What is your risk tolerance or willingness to take financial risk?</item>
+        <item>What is your preference when holding risky assets?</item>
+        <item>What is your perception of the riskiness of the stock market?</item>
+        <item>In the past, when faced with investment losses, what action did you take?</item>
+        <item>From all your assets, how many percent do you plan to invest in Growth Assets (equities and alternatives)?</item>
+        <item>How long is your investment plan period?</item>
+    </string-array>
+
+    <string-array name="answer.1.indonesia">
+        <item>Sama sekali tidah tahu apa-apa</item>
+        <item>Memiliki sedikit pengetahuan</item>
+        <item>Cukup paham tentang konsep yang ada</item>
+        <item>Kompeten dan paham</item>
+        <item>Ahli dan memiliki pengetahuan yang luas</item>
+    </string-array>
+
+    <string-array name="answer.1.english">
+        <item>Not at All Knowledgeable</item>
+        <item>Minimally Knowledgeable</item>
+        <item>Moderately Knowledgeable</item>
+        <item>Competent</item>
+        <item>Very Knowledgeable</item>
+    </string-array>
+
+    <string-array name="answer.2.indonesia">
+        <item>Belum punya pengalaman</item>
+        <item>Sangat jarang atau sedikit</item>
+        <item>Cukup berpengalaman</item>
+        <item>Sering melakukan investasi</item>
+        <item>Memiliki pengalaman yang sangat luas</item>
+    </string-array>
+
+    <string-array name="answer.2.english">
+        <item>None</item>
+        <item>Very Little</item>
+        <item>Some</item>
+        <item>Modest</item>
+        <item>Extensive</item>
+    </string-array>
+
+    <string-array name="answer.3.indonesia">
+        <item>Sangat rendah</item>
+        <item>Rendah</item>
+        <item>Sedang</item>
+        <item>Tinggi</item>
+        <item>Sangat tinggi</item>
+    </string-array>
+
+    <string-array name="answer.3.english">
+        <item>Very Low</item>
+        <item>Low</item>
+        <item>Moderate</item>
+        <item>High</item>
+        <item>Very High</item>
+    </string-array>
+
+    <string-array name="answer.4.indonesia">
+        <item>Memaksimalkan keamanan</item>
+        <item>Sebagian besar main aman</item>
+        <item>Campuran sebagian keamanan dan sebagian pengembalian</item>
+        <item>Sebagian besar pengembalian</item>
+        <item>Maksimalkan pengembalian</item>
+    </string-array>
+
+    <string-array name="answer.4.english">
+        <item>Maximize Safety</item>
+        <item>Mostly Safety</item>
+        <item>Mix of Safety and Return</item>
+        <item>Mostly Return</item>
+        <item>Maximize Return</item>
+    </string-array>
+
+    <string-array name="answer.5.indonesia">
+        <item>Sangat berisiko</item>
+        <item>Agak berisiko</item>
+        <item>Netral </item>
+        <item>Agak aman</item>
+        <item>Sangat aman </item>
+    </string-array>
+
+    <string-array name="answer.5.english">
+        <item>Very Risky</item>
+        <item>Somewhat Risky</item>
+        <item>Neutral</item>
+        <item>Somewhat Safe</item>
+        <item>Very Safe</item>
+    </string-array>
+
+    <string-array name="answer.6.indonesia">
+        <item>Menjual investasi</item>
+        <item>Tidak melakukan apa-apa</item>
+        <item>Membeli lebih banyak</item>
+    </string-array>
+
+    <string-array name="answer.6.english">
+        <item>Sold Investment</item>
+        <item>Did Nothing</item>
+        <item>Purchased More</item>
+    </string-array>
+
+    <string-array name="answer.7.indonesia">
+        <item>Kurang dari 30%</item>
+        <item>30% - 70%</item>
+        <item>Lebih dari 70%</item>
+    </string-array>
+
+    <string-array name="answer.7.english">
+        <item>Less Than 30%</item>
+        <item>30% - 70%</item>
+        <item>Greater Than 70%</item>
+    </string-array>
+
+    <string-array name="answer.8.indonesia">
+        <item>Kurang dari atau sama dengan 5 tahun</item>
+        <item>5 – 10 tahun</item>
+        <item>Lebih dari atau sama dengan 10 tahun</item>
+    </string-array>
+
+    <string-array name="answer.8.english">
+        <item>Less than or equal to 5 years</item>
+        <item>5 – 10 years</item>
+        <item>Greater than or equal to 10 years</item>
+    </string-array>
 </resources>

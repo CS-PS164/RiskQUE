@@ -17,26 +17,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <com.rifqi.androintermediate.customView.EmailForm
         android:id="@+id/et_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="32dp"
-        android:hint="@string/email"
+        android:background="@drawable/bg_edit_text"
+        android:drawableStart="@drawable/bg_mail_form"
+        android:drawablePadding="8dp"
         android:inputType="textEmailAddress"
         android:paddingHorizontal="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_login" />
 
-    <EditText
+    <com.rifqi.androintermediate.customView.PassForm
         android:id="@+id/et_login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
-        android:hint="@string/password"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edit_text"
+        android:drawableStart="@drawable/bg_lock_form"
+        android:drawablePadding="8dp"
         android:inputType="textPassword"
         android:paddingHorizontal="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,9 +49,9 @@
 
     <Button
         android:id="@+id/btn_login"
-        android:background="@drawable/bg_button"
-        android:layout_marginTop="48dp"
         style="@style/button.big"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/bg_button"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,10 +68,10 @@
 
     <Button
         android:id="@+id/btn_google"
-        android:layout_marginTop="40dp"
         style="@style/button.big"
-        android:text="@string/google"
+        android:layout_marginTop="40dp"
         android:background="@drawable/bg_button"
+        android:text="@string/google"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/div_body" />
@@ -84,17 +88,17 @@
 
         <TextView
             android:id="@+id/tv_belum_punya"
+            style="@style/title.medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/title.medium"
             android:text="@string/belum_punya_akun"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tv_register"
+            style="@style/title.medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/title.medium"
             android:text="@string/register"
             android:textColor="@color/purple_500" />
     </LinearLayout>

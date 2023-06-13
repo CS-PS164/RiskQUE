@@ -30,6 +30,7 @@
     <string name="google">Google</string>
     <string name="mulai">Mulai</string>
     <string name="belum_punya_akun">Belum punya akun?</string>
+    <string name="selesai">Selesai</string>
     <string name="simpan">Simpan hasil</string>
     <string name="selanjutnya">Selanjutnya</string>
 </resources>

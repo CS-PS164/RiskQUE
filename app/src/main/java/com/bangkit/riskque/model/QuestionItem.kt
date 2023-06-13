@@ -6,6 +6,5 @@ data class Quest(
 )
 
 data class Answer(
-    val answer: String,
-    val point: Int
+    val answer: String
 )

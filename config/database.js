@@ -1,8 +1,8 @@
 const mysql = require("mysql2/promise");
 
 const databaseConfig = {
-  connectionLimit: 10,
-  host: "localhost:8889",
+  // connectionLimit: 10,
+  host: "localhost",
   user: "root",
   password: "root",
   database: "riskque",

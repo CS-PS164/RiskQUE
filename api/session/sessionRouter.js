@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const { signup } = require("./sessionController");
+const { signup, login } = require("./sessionController");
 
 router.post("/signup", signup);
+router.post("/login", login);
 
 router.use((req, res, next) => {
   console.info(!req.headers.token);

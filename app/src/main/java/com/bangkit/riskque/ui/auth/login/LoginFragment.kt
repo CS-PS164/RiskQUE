@@ -63,7 +63,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun moveToQuestActivity() {
-        (activity as AuthActivity).moveToQuestActivity()
+        (activity as AuthActivity).moveToRiskTypeActivity()
     }
 
     override fun onDestroyView() {

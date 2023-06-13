@@ -1,6 +1,7 @@
 package com.bangkit.riskque.ui.question
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,7 @@ import androidx.activity.viewModels
 import com.bangkit.riskque.R
 import com.bangkit.riskque.databinding.ActivityQuestionBinding
 import com.bangkit.riskque.model.Quest
+import com.bangkit.riskque.utils.Constants
 import com.bangkit.riskque.utils.DataDummy.generateDataQuestion
 
 class QuestionActivity : AppCompatActivity() {
@@ -47,7 +49,8 @@ class QuestionActivity : AppCompatActivity() {
                 } else {
                     btnNext.text = resources.getString(R.string.selesai)
                     btnNext.setOnClickListener {
-                        //move to risk type
+                        Log.e("total point", viewModel.getTotalPoint().toString())
+                        moveToRiskTypeActivity(viewModel.getTotalPoint())
                     }
                 }
 
@@ -62,11 +65,11 @@ class QuestionActivity : AppCompatActivity() {
                     rbAnswer5.text = quest.option[4].answer
                 } else {
                     rbAnswer1.text = quest.option[0].answer
-                    rbAnswer2.text = quest.option[1].answer
-                    rbAnswer3.text = quest.option[2].answer
+                    rbAnswer3.text = quest.option[1].answer
+                    rbAnswer5.text = quest.option[2].answer
 
-                    rbAnswer1.visibility = View.GONE
-                    rbAnswer1.visibility = View.GONE
+                    rbAnswer2.visibility = View.GONE
+                    rbAnswer4.visibility = View.GONE
                 }
             }
         }
@@ -101,5 +104,13 @@ class QuestionActivity : AppCompatActivity() {
                     }
             }
         }
+    }
+
+    fun moveToRiskTypeActivity(totalPoint: Int) {
+        val intentRiskType = Intent(this, RiskTypeActivity::class.java)
+        intentRiskType.putExtra(Constants.EXTRA_POINT, totalPoint)
+        startActivity(intentRiskType)
+
+        finish()
     }
 }

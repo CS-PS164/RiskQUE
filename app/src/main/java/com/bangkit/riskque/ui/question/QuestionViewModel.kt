@@ -11,7 +11,7 @@ class QuestionViewModel : ViewModel() {
     private val _questNumber = MutableLiveData(0)
     val questNumber: LiveData<Int> get() = _questNumber
 
-    private val _point = MutableLiveData(arrayOf(0,0,0,0,0,0,0,0))
+    private val _point = MutableLiveData(arrayOf(0, 0, 0, 0, 0, 0, 0, 0))
     val point: LiveData<Array<Int>> get() = _point
 
     fun getPrev() {
@@ -25,5 +25,14 @@ class QuestionViewModel : ViewModel() {
     fun setPoint(point: Int) {
         _point.value?.set(_questNumber.value!!, point)
         //Log.e("point", _point.value?.get(_questNumber.value!!)?.toString() ?: "tidak")
+    }
+
+    fun getTotalPoint(): Int {
+        var result = 0
+        for (num in point.value!!) {
+            result += num
+        }
+        result -= (point.value!![6] + point.value!![7])
+        return result
     }
 }

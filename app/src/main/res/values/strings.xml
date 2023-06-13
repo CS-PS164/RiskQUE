@@ -1,4 +1,14 @@
 <resources>
+
+
+    <!-- Dummy for onboarding screen -->
+    <string name="title1">EASY GOING, EASY TRIP</string>
+    <string name="title2">FIND YOUR NEW FRIEND</string>
+    <string name="title3">CAPTURE YOUR BEST MOMENT</string>
+    <string name="description1">Temukan Keseruan Baru dengan Berpetualang di Alam Bebas</string>
+    <string name="description2">Temukan Teman Baru Anda Untuk di Ajak Berpetualang</string>
+    <string name="description3">Abadikan Moment Berharga Selama Berpetualang</string>
+
     <string name="app_name">RiskQUE</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -10,16 +20,10 @@
     <string name="password">password</string>
     <string name="confirm_password">confirm password</string>
     <string name="google">Google</string>
-
-    <!-- Dummy for onboarding screen -->
-    <string name="title1">EASY GOING, EASY TRIP</string>
-    <string name="title2">FIND YOUR NEW FRIEND</string>
-    <string name="title3">CAPTURE YOUR BEST MOMENT</string>
-    <string name="description1">Temukan Keseruan Baru dengan Berpetualang di Alam Bebas</string>
-    <string name="description2">Temukan Teman Baru Anda Untuk di Ajak Berpetualang</string>
-    <string name="description3">Abadikan Moment Berharga Selama Berpetualang</string>
     <string name="mulai">Mulai</string>
     <string name="belum_punya_akun">Belum punya akun?</string>
+    <string name="selesai">Selesai</string>
+    <string name="selanjutnya">Selanjutnya</string>
 
     <!-- Data for question -->
     <string-array name="question.indonesia">

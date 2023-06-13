@@ -3,8 +3,12 @@ package com.bangkit.riskque.ui.question
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.RadioButton
+import android.widget.Toast
 import androidx.activity.viewModels
+import com.bangkit.riskque.R
 import com.bangkit.riskque.databinding.ActivityQuestionBinding
 import com.bangkit.riskque.model.Quest
 import com.bangkit.riskque.utils.DataDummy.generateDataQuestion
@@ -22,43 +26,79 @@ class QuestionActivity : AppCompatActivity() {
         binding = ActivityQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnPrev.setOnClickListener {
+            viewModel.getPrev()
+        }
+
         viewModel.questNumber.observe(this) {
             quest = generateDataQuestion(it)
 
             binding.apply {
-                tvPageNumber.text = "${it+1}"
+                tvPageNumber.text = "${it + 1}"
 
-                if (it == 0){
-                    btnPrev.visibility = View.GONE
-                }else{
-                    btnPrev.visibility = View.VISIBLE
+                btnPrev.visibility = if (it != 0) View.VISIBLE else View.GONE
+
+                if (it != 7) {
+                    btnNext.text = resources.getString(R.string.selanjutnya)
+                    btnNext.setOnClickListener {
+                        rgQuestion.clearCheck()
+                        viewModel.getNext()
+                    }
+                } else {
+                    btnNext.text = resources.getString(R.string.selesai)
+                    btnNext.setOnClickListener {
+                        //move to risk type
+                    }
                 }
 
-                if (quest.option.size == 5){
-                    tvQuestion.text = quest.quest
-                    tvAnswer1.text = quest.option[0].answer
-                    tvAnswer2.text = quest.option[1].answer
-                    tvAnswer3.text = quest.option[2].answer
-                    tvAnswer4.text = quest.option[3].answer
-                    tvAnswer5.text = quest.option[4].answer
-                }else{
-                    tvQuestion.text = quest.quest
-                    tvAnswer1.text = quest.option[0].answer
-                    tvAnswer2.text = quest.option[1].answer
-                    tvAnswer3.text = quest.option[2].answer
 
-                    tvAnswer4.visibility = View.GONE
-                    tvAnswer5.visibility = View.GONE
+                tvQuestion.text = quest.quest
+
+                if (it < 5) {
+                    rbAnswer1.text = quest.option[0].answer
+                    rbAnswer2.text = quest.option[1].answer
+                    rbAnswer3.text = quest.option[2].answer
+                    rbAnswer4.text = quest.option[3].answer
+                    rbAnswer5.text = quest.option[4].answer
+                } else {
+                    rbAnswer1.text = quest.option[0].answer
+                    rbAnswer2.text = quest.option[1].answer
+                    rbAnswer3.text = quest.option[2].answer
+
+                    rbAnswer1.visibility = View.GONE
+                    rbAnswer1.visibility = View.GONE
                 }
             }
         }
+    }
 
-        binding.apply {
-            btnPrev.setOnClickListener {
-                viewModel.getPrev()
-            }
-            btnNext.setOnClickListener {
-                viewModel.getNext()
+    fun onRadioButtonClicked(view: View) {
+        if (view is RadioButton) {
+            // Is the button now checked?
+            val checked = view.isChecked
+
+            // Check which radio button was clicked
+            when (view.getId()) {
+                R.id.rb_answer_1 ->
+                    if (checked) {
+                        viewModel.setPoint(1)
+                    }
+                R.id.rb_answer_2 ->
+                    if (checked) {
+                        viewModel.setPoint(2)
+                    }
+                R.id.rb_answer_3 ->
+                    if (checked) {
+                        viewModel.setPoint(3)
+                    }
+                R.id.rb_answer_4 ->
+                    if (checked) {
+                        viewModel.setPoint(4)
+                    }
+                R.id.rb_answer_5 ->
+                    if (checked) {
+                        viewModel.setPoint(5)
+                    }
             }
         }
     }

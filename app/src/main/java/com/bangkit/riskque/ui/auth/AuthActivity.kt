@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.bangkit.riskque.R
 import com.bangkit.riskque.databinding.ActivityAuthBinding
 import com.bangkit.riskque.ui.auth.login.LoginFragment
-import com.bangkit.riskque.ui.main.MainActivity
+import com.bangkit.riskque.ui.question.RiskTypeActivity
 
 class AuthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthBinding
@@ -22,8 +22,8 @@ class AuthActivity : AppCompatActivity() {
         fragmentManager.beginTransaction().add(R.id.frame_container, loginFragment).commit()
     }
 
-    fun moveToMainActivity() {
-        startActivity(Intent(this, MainActivity::class.java))
+    fun moveToQuestActivity() {
+        startActivity(Intent(this, RiskTypeActivity::class.java))
         finish()
     }
 }

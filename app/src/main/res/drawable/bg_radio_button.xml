@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true" >
+        <shape android:shape="rectangle" >
+            <corners android:radius="8dp" />
+            <stroke android:width="1.5dp" android:color="@color/design_default_color_primary" />
+        </shape>
+    </item>
+
+    <!--the outline box turns to grey when the edit text is out of focus-->
+    <item android:state_checked="false" >
+        <shape android:shape="rectangle" >
+            <corners android:radius="8dp" />
+            <stroke android:width="1.5dp" android:color="@color/gray" />
+        </shape>
+    </item>
+</selector>

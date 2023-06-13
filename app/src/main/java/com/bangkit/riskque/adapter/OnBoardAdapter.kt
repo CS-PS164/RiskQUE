@@ -15,10 +15,12 @@ class OnBoardAdapter(private val onBoardItems: List<OnBoardItem>) :
     inner class OnBoardingItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val image = view.findViewById<ImageView>(R.id.iv_on_board_image)
+        private val title = view.findViewById<TextView>(R.id.tv_on_board_title)
         private val description = view.findViewById<TextView>(R.id.tv_on_board_description)
 
         fun bind(onBoardItem: OnBoardItem) {
             image.setImageResource(onBoardItem.image)
+            title.text = onBoardItem.title
             description.text = onBoardItem.description
         }
     }

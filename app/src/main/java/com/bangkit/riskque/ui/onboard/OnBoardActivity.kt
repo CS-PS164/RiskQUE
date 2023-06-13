@@ -10,7 +10,6 @@ import com.bangkit.riskque.adapter.OnBoardAdapter
 import com.bangkit.riskque.databinding.ActivityOnBoardBinding
 import com.bangkit.riskque.model.OnBoardItem
 import com.bangkit.riskque.ui.auth.AuthActivity
-import com.bangkit.riskque.ui.main.MainActivity
 
 class OnBoardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOnBoardBinding
@@ -20,53 +19,57 @@ class OnBoardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOnBoardBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setOnBoardItems()
 
+        onBoardAdapter = OnBoardAdapter(setOnBoardItems())
+
+        binding.apply {
+            vpOnBoard.adapter = onBoardAdapter
+            binding.diOnBoard.attachTo(binding.vpOnBoard)
+        }
+
+        binding.apply {
+            btnSkip.setOnClickListener {
+                moveToAuthActivity()
+            }
+            btnStart.setOnClickListener {
+                moveToAuthActivity()
+            }
+        }
 
         binding.vpOnBoard.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
 
+                binding.btnNext.setOnClickListener {
+                    binding.vpOnBoard.setCurrentItem(position+1, true)
+                }
                 if (position == 2) {
                     binding.apply {
                         btnSkip.visibility = View.GONE
+                        btnNext.visibility = View.GONE
                         btnStart.visibility = View.VISIBLE
                     }
                 }else{
                     binding.apply {
                         btnSkip.visibility = View.VISIBLE
+                        btnNext.visibility = View.VISIBLE
                         btnStart.visibility = View.GONE
-                    }
-                }
-
-                binding.apply {
-                    btnSkip.setOnClickListener {
-                        moveToAuthActivity()
-                    }
-                    btnStart.setOnClickListener {
-                        moveToAuthActivity()
                     }
                 }
             }
         })
     }
 
-    private fun setOnBoardItems() {
-        onBoardAdapter = OnBoardAdapter(
-            listOf(
-                OnBoardItem(
-                    R.drawable.on_board_1, getString(R.string.description1)
-                ), OnBoardItem(
-                    R.drawable.on_board_2, getString(R.string.description2)
-                ), OnBoardItem(
-                    R.drawable.on_board_3, getString(R.string.description3)
-                )
+    private fun setOnBoardItems() : List<OnBoardItem> {
+        return listOf(
+            OnBoardItem(
+                R.drawable.on_board_1,getString(R.string.title1), getString(R.string.description1)
+            ), OnBoardItem(
+                R.drawable.on_board_2,getString(R.string.title2), getString(R.string.description2)
+            ), OnBoardItem(
+                R.drawable.on_board_3,getString(R.string.title3), getString(R.string.description3)
             )
         )
-        binding.apply {
-            vpOnBoard.adapter = onBoardAdapter
-            binding.diOnBoard.attachTo(binding.vpOnBoard)
-        }
     }
 
     fun moveToAuthActivity() {

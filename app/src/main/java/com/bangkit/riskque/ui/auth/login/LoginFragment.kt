@@ -48,7 +48,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun login(email: String, password: String) {
-        moveToMainActivity()
+        moveToQuestActivity()
     }
 
     private fun moveToRegister() {
@@ -62,8 +62,8 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun moveToMainActivity() {
-        (activity as AuthActivity).moveToMainActivity()
+    private fun moveToQuestActivity() {
+        (activity as AuthActivity).moveToQuestActivity()
     }
 
     override fun onDestroyView() {

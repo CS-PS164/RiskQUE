@@ -2,6 +2,7 @@ const express = require("express");
 const db = require("./../../config/database");
 const sessionValidation = require("./../validation/sessionValidation");
 const helper = require("./../helper/index");
+const moment = require("moment");
 
 const signup = async (req, res) => {
   try {
@@ -16,7 +17,7 @@ const signup = async (req, res) => {
       return res.status(400).json(response);
     }
 
-    let { email, username, password, nama } = value;
+    let { username, email, password, nama } = value;
     const checkUsernameQuery =
       "SELECT username FROM `users` WHERE username = ?";
     const checkUsername = await db.query(checkUsernameQuery, [username]);
@@ -41,7 +42,7 @@ const signup = async (req, res) => {
     const token_exp = dateNow.add(1, "years").format("YYYY-MM-DD HH:mm:ss");
 
     const insertUserStatement =
-      "INSERT INTO `users(`id`, `username`, `email`, `password`, `nama`) VALUES(?,?,?,?,?)";
+      "INSERT INTO `users` (`id`, `username`, `email`, `password`, `nama`, `role_id`) VALUES(?,?,?,?,?,?)";
 
     const insertTokenStatement =
       "INSERT INTO `session`(`user_id`, `token`, `token_exp`) VALUES(?,?,?)";
@@ -55,6 +56,7 @@ const signup = async (req, res) => {
         email,
         password,
         nama,
+        2,
       ]);
 
       await connection.query(insertTokenStatement, [user_id, token, token_exp]);
@@ -190,7 +192,30 @@ const login = async (req, res) => {
   }
 };
 
+const logout = async (req, res) => {
+  try {
+    const token = req.headers.token;
+
+    const logoutStatement = "DELETE FROM `session` WHERE token=?";
+    await db.query(logoutStatement, token);
+
+    const response = {
+      rc: "00",
+      message: "Berhasil logout",
+    };
+    return res.status(400).json(response);
+  } catch (error) {
+    const resErr = {
+      rc: "30",
+      message: "Kesalahan umum",
+    };
+    console.info(error);
+    return res.status(400).json(resErr);
+  }
+};
+
 module.exports = {
   signup,
   login,
+  logout,
 };

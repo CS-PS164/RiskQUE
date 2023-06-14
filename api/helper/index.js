@@ -42,7 +42,7 @@ const decryption = (message) => {
 const generateUserid = () => {
   const dateNow = moment();
   const userid =
-    "U-" +
+    // "" +
     dateNow.format("DD") +
     (Math.floor(Math.random() * 10) + 1) +
     dateNow.format("MM") +

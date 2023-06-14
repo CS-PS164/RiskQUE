@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { signup, login } = require("./sessionController");
+const { signup, login, logout } = require("./sessionController");
 
 router.post("/signup", signup);
 router.post("/login", login);
@@ -17,4 +17,5 @@ router.use((req, res, next) => {
   next();
 });
 
+router.post("/logout", logout);
 module.exports = router;

@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.RadioButton
-import android.widget.Toast
 import androidx.activity.viewModels
 import com.bangkit.riskque.R
 import com.bangkit.riskque.databinding.ActivityQuestionBinding
@@ -106,7 +105,7 @@ class QuestionActivity : AppCompatActivity() {
         }
     }
 
-    fun moveToRiskTypeActivity(totalPoint: Int) {
+    private fun moveToRiskTypeActivity(totalPoint: Int) {
         val intentRiskType = Intent(this, RiskTypeActivity::class.java)
         intentRiskType.putExtra(Constants.EXTRA_POINT, totalPoint)
         startActivity(intentRiskType)

@@ -2,15 +2,120 @@
     <!-- Base application theme. -->
     <style name="Theme.RiskQUE" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/dark_purple</item>
+        <item name="colorPrimaryVariant">@color/dark_purple_variant</item>
+        <item name="colorOnPrimary">@color/dark_purple_on</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/tyrant_purple</item>
+        <item name="colorSecondaryVariant">@color/tyrant_purple_variant</item>
+        <item name="colorOnSecondary">@color/tyrant_purple_on</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:colorError" tools:targetApi="o">@color/error_color1</item>
+
+        <item name="colorSurface">?attr/colorPrimary</item>
+        <item name="colorOnSurface">?attr/colorOnPrimary</item>
         <!-- Customize your theme here. -->
+    </style>
+    <!-- bg color. -->
+    <style name="colorbackgroundStyle">
+        <item name="android:background">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="appBarStyle">
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <!-- Font style -->
+    <style name="display">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="display.medium">
+        <item name="android:textSize">45sp</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+    </style>
+
+    <style name="display.small">
+        <item name="android:textSize">36sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+    </style>
+
+    <style name="title">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="title.large">
+        <item name="android:textSize">22sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="title.medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">8.15sp</item>
+    </style>
+
+    <style name="title.small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6.1sp</item>
+    </style>
+
+    <style name="label">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="label.large">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6.1sp</item>
+    </style>
+
+    <style name="label.medium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">4.5sp</item>
+    </style>
+
+    <style name="label.small">
+        <item name="android:textSize">11sp</item>
+        <item name="android:lineSpacingExtra">5.5sp</item>
+    </style>
+
+    <style name="body">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="body.large">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">8.5sp</item>
+    </style>
+
+    <style name="body.medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6.25sp</item>
+    </style>
+
+    <style name="body.small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">4.4sp</item>
+    </style>
+
+    <style name="button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:layout_height">36dp</item>
+    </style>
+
+    <style name="button.small">
+        <item name="android:layout_width">104dp</item>
+    </style>
+
+    <style name="button.big">
+        <item name="android:layout_width">156dp</item>
     </style>
 </resources>

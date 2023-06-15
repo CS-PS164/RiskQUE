@@ -72,7 +72,7 @@ class OnBoardActivity : AppCompatActivity() {
         )
     }
 
-    fun moveToAuthActivity() {
+    private fun moveToAuthActivity() {
         startActivity(Intent(this, AuthActivity::class.java))
         finish()
     }

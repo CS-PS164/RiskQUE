@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bangkit.riskque.R
 import com.bangkit.riskque.databinding.ActivityMainBinding
+import com.bangkit.riskque.ui.auth.AuthActivity
 import com.bangkit.riskque.ui.faq.FaqActivity
 import com.bangkit.riskque.ui.question.RiskTypeActivity
 import com.bangkit.riskque.ui.setting.SettingActivity
@@ -33,6 +34,10 @@ class MainActivity : AppCompatActivity() {
                 binding.navView.visibility = View.GONE
             }
         }
+    }
+    fun moveToAuthActivity() {
+        startActivity(Intent(this, AuthActivity::class.java))
+        finish()
     }
 
     fun moveToUserInformationActivity() {

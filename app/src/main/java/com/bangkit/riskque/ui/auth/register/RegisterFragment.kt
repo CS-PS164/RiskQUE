@@ -1,16 +1,21 @@
 package com.bangkit.riskque.ui.auth.register
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.bangkit.riskque.R
 import com.bangkit.riskque.databinding.FragmentRegisterBinding
 import com.bangkit.riskque.ui.auth.login.LoginFragment
+import com.google.android.material.snackbar.Snackbar
 
 class RegisterFragment : Fragment() {
 
+    private val authViewModel: RegisterViewModel by activityViewModels()
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
 
@@ -28,21 +33,34 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.apply {
+        editTextListener()
 
-            btnLogin.setOnClickListener {
+        authViewModel.apply {
+            isLoading.observe(viewLifecycleOwner) {
+                showLoading(it)
+            }
+            isButtonEnable.observe(viewLifecycleOwner) {
+                binding.btnRegister.isEnabled = it
+            }
+        }
+
+        binding.apply {
+            btnRegister.setOnClickListener {
                 email = etRegisterEmail.text.toString()
                 password = etRegisterPassword.text.toString()
                 username = etRegisterUsername.text.toString()
 
-                register(email, password, username)
+                authViewModel.apply {
+                    register(username, email, password)
+                    registerResponse.observe(viewLifecycleOwner) {
+                        moveToLogin()
+                    }
+                    isError.observe(viewLifecycleOwner) {
+                        showError(it)
+                    }
+                }
             }
         }
-    }
-
-
-    private fun register(email: String, password: String, username: String) {
-        moveToLogin()
     }
 
     private fun moveToLogin() {
@@ -54,6 +72,66 @@ class RegisterFragment : Fragment() {
             addToBackStack(null)
             commit()
         }
+    }
+
+    private fun editTextListener() {
+        binding.etRegisterUsername.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                authViewModel.apply {
+                    setNameOk(binding.etRegisterUsername.isNameOk())
+                    isButtonEnable()
+                }
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+            }
+
+        })
+
+        binding.etRegisterEmail.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                authViewModel.apply {
+                    setEmailOk(binding.etRegisterEmail.isEmailOk())
+                    isButtonEnable()
+                }
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+            }
+
+        })
+
+        binding.etRegisterPassword.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                authViewModel.apply {
+                    setPassOk(binding.etRegisterPassword.isPassOk())
+                    isButtonEnable()
+                }
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+            }
+
+        })
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
+    private fun showError(text: String) {
+        Snackbar.make(
+            binding.root, text, Snackbar.LENGTH_SHORT
+        ).show()
     }
 
     override fun onDestroyView() {

@@ -22,7 +22,6 @@ class RiskTypeActivity : AppCompatActivity() {
         val point = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             intent.getIntExtra(Constants.EXTRA_POINT, 0)
         } else {
-            @Suppress("DEPRECATION")
             intent.getIntExtra(Constants.EXTRA_POINT, 0)
         }
 
@@ -53,12 +52,12 @@ class RiskTypeActivity : AppCompatActivity() {
         }
     }
 
-    fun moveToQuestionActivity() {
+    private fun moveToQuestionActivity() {
         startActivity(Intent(this, QuestionActivity::class.java))
         finish()
     }
 
-    fun moveToMainActivity() {
+    private fun moveToMainActivity() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }

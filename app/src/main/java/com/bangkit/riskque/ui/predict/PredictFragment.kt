@@ -5,9 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bangkit.riskque.R
 import com.bangkit.riskque.databinding.FragmentPredictBinding
-import com.bangkit.riskque.databinding.FragmentSearchBinding
 
 class PredictFragment : Fragment() {
 

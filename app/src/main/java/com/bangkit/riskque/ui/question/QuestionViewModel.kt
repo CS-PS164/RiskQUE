@@ -1,10 +1,8 @@
 package com.bangkit.riskque.ui.question
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import kotlin.math.absoluteValue
 
 class QuestionViewModel : ViewModel() {
 
@@ -12,7 +10,7 @@ class QuestionViewModel : ViewModel() {
     val questNumber: LiveData<Int> get() = _questNumber
 
     private val _point = MutableLiveData(arrayOf(0, 0, 0, 0, 0, 0, 0, 0))
-    val point: LiveData<Array<Int>> get() = _point
+    private val point: LiveData<Array<Int>> get() = _point
 
     fun getPrev() {
         _questNumber.value = _questNumber.value?.minus(1)

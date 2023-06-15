@@ -21,7 +21,6 @@ class AuthActivity : AppCompatActivity() {
 
         fragmentManager.beginTransaction().add(R.id.frame_container, loginFragment).commit()
     }
-
     fun moveToRiskTypeActivity() {
         startActivity(Intent(this, RiskTypeActivity::class.java))
         finish()

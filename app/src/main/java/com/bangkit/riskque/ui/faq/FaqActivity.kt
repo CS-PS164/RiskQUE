@@ -2,7 +2,6 @@ package com.bangkit.riskque.ui.faq
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bangkit.riskque.R
 import com.bangkit.riskque.databinding.ActivityFaqBinding
 
 class FaqActivity : AppCompatActivity() {

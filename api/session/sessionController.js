@@ -158,10 +158,10 @@ const login = async (req, res) => {
       const createUpdateTokenStatement =
         "UPDATE `session` SET `user_id`=?,`token`=?,`token_exp`=? WHERE user_id=?";
       const createupdateToken = await db.query(createUpdateTokenStatement, [
-        search[0].user_id,
+        search[0].id,
         token,
         token_exp,
-        search[0].user_id,
+        search[0].id,
       ]);
 
       if (createupdateToken.affectedRows == 0) {

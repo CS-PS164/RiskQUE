@@ -1,12 +1,12 @@
 <resources>
 
     <!-- Dummy for onboarding screen -->
-    <string name="title1">EASY GOING, EASY TRIP</string>
-    <string name="title2">FIND YOUR NEW FRIEND</string>
-    <string name="title3">CAPTURE YOUR BEST MOMENT</string>
-    <string name="description1">Temukan Keseruan Baru dengan Berpetualang di Alam Bebas</string>
-    <string name="description2">Temukan Teman Baru Anda Untuk di Ajak Berpetualang</string>
-    <string name="description3">Abadikan Moment Berharga Selama Berpetualang</string>
+    <string name="title1">WELCOME</string>
+    <string name="title2">GET YOUR SOLUTION</string>
+    <string name="title3">LET\'S STARTED</string>
+    <string name="description1">Selamat datang di RiskQUE</string>
+    <string name="description2">Memberikan rekomendasi sebagai solusi sesuai perilaku kamu</string>
+    <string name="description3">Mulai dengan mengerjakan kuis singkat ini, untuk mengetahui tingkat risiko dalam berinvestasi</string>
 
     <!-- Dummy for type risk screen -->
     <string name="konservatif">Konservatif</string>

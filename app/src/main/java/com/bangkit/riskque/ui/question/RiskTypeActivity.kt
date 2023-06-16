@@ -5,6 +5,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import coil.load
 import com.bangkit.riskque.R
 import com.bangkit.riskque.databinding.ActivityRiskTypeBinding
 import com.bangkit.riskque.ui.main.MainActivity
@@ -32,12 +33,15 @@ class RiskTypeActivity : AppCompatActivity() {
                 if (point < 14) {
                     tvQuestionTitle.text = resources.getString(R.string.konservatif)
                     tvQuestionDescription.text = resources.getString(R.string.konservatif_definition)
+                    ivQuestionImage.load(R.drawable.ic_konservatif)
                 } else if (point < 23) {
                     tvQuestionTitle.text = resources.getString(R.string.moderat)
                     tvQuestionDescription.text = resources.getString(R.string.moderat_definition)
+                    ivQuestionImage.load(R.drawable.ic_moderat)
                 } else {
                     tvQuestionTitle.text = resources.getString(R.string.agresif)
                     tvQuestionDescription.text = resources.getString(R.string.agresif_definition)
+                    ivQuestionImage.load(R.drawable.ic_agresif)
                 }
             }
         }

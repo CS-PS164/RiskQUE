@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
     id 'kotlin-parcelize'
 }
 
@@ -24,6 +25,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -32,6 +34,12 @@ android {
         jvmTarget = '1.8'
         freeCompilerArgs += ["-Xopt-in=kotlin.RequiresOptIn"]
     }
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KaptGenerateStubs).configureEach {
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
+    }
+
     buildFeatures {
         viewBinding true
     }
@@ -54,7 +62,7 @@ dependencies {
     implementation 'androidx.room:room-ktx:2.6.0-alpha01'
     implementation 'androidx.room:room-runtime:2.5.1'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
-    //kapt 'androidx.room:room-compiler:2.5.1'
+    kapt 'androidx.room:room-compiler:2.5.1'
     implementation "androidx.datastore:datastore-preferences:1.0.0"
 
     //mockito

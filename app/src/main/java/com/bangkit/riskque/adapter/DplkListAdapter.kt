@@ -53,10 +53,10 @@ class DplkListAdapter :
                 tvExpenseRatioData.text = data.lon.toString()
                 tvTotalAumData.text = data.lon.toString()
 
-/*
-                Glide.with(itemView.context).load(data.photoUrl).into(ivItemPhoto)
+                /*
+                                Glide.with(itemView.context).load(data.photoUrl).into(ivItemPhoto)
 
- */
+                 */
             }
         }
 

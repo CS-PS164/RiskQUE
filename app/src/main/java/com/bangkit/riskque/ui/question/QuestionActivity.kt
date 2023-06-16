@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.RadioButton
 import androidx.activity.viewModels
@@ -48,7 +47,6 @@ class QuestionActivity : AppCompatActivity() {
                 } else {
                     btnNext.text = resources.getString(R.string.selesai)
                     btnNext.setOnClickListener {
-                        Log.e("total point", viewModel.getTotalPoint().toString())
                         moveToRiskTypeActivity(viewModel.getTotalPoint())
                     }
                 }
@@ -85,18 +83,22 @@ class QuestionActivity : AppCompatActivity() {
                     if (checked) {
                         viewModel.setPoint(1)
                     }
+
                 R.id.rb_answer_2 ->
                     if (checked) {
                         viewModel.setPoint(2)
                     }
+
                 R.id.rb_answer_3 ->
                     if (checked) {
                         viewModel.setPoint(3)
                     }
+
                 R.id.rb_answer_4 ->
                     if (checked) {
                         viewModel.setPoint(4)
                     }
+
                 R.id.rb_answer_5 ->
                     if (checked) {
                         viewModel.setPoint(5)

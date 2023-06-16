@@ -22,7 +22,6 @@ class QuestionViewModel : ViewModel() {
 
     fun setPoint(point: Int) {
         _point.value?.set(_questNumber.value!!, point)
-        //Log.e("point", _point.value?.get(_questNumber.value!!)?.toString() ?: "tidak")
     }
 
     fun getTotalPoint(): Int {

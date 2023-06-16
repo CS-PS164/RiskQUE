@@ -2,10 +2,10 @@ const path = require('path')
 const tf = require('@tensorflow/tfjs');
 
 const prediction = async (req, res) => {
-  try {
+  // try {
     // Load model
-    const modelPath = path.join(__dirname, 'model.json');
-    const model = await tf.loadLayersModel(`file://${modelPath}`);
+  //   const modelPath = path.join(__dirname, 'model.json');
+  //   const model = await tf.loadLayersModel(`file://${modelPath}`);
     // const model = await tf.loadLayersModel(`model.json`);
 
     // data
@@ -15,20 +15,20 @@ const prediction = async (req, res) => {
     // ['Saham', 'Pasar Uang / Kas', 'Obligasi / SBN / Sukuk', '1 Bulan',
     //    '3 Bulan', '6 Bulan', '1 Tahun', '3 Tahun', '5 Tahun', 'AUM (M)']
 
-    const inputData = req.body;
-    console.log(inputData);
+  //   const inputData = req.body;
+  //   console.log(inputData);
 
     // Make predictions using the loaded model
     // const inputTensor = tf.tensor([inputData]);
     // const predictions = model.predict(inputTensor);
     // const predictionsArray = await predictions.array();
 
-    res.json("test");
-  } catch (error) {
-    // error handling
-    console.error("Prediction error:", error);
-    res.status(500).json({ error: "Prediction failed" });
-  }
+//     res.json("test");
+//   } catch (error) {
+//     // error handling
+//     console.error("Prediction error:", error);
+//     res.status(500).json({ error: "Prediction failed" });
+//   }
 };
 
 module.exports = {

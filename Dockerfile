@@ -1,6 +1,13 @@
-FROM node:18-alpine as depencencies
-WORKDIR /api
-COPY package.json .
-RUN npm i
-COPY . . 
+FROM node:lts-alpine
 
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8080 
+
+CMD [ "npm", "run", "start" ]

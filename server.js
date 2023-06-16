@@ -2,8 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const db = require("./config/database");
 
-const PORT = 8000;
-const DOMAIN = "127.0.0.1";
+const PORT = parseInt(process.env.PORT) || 8080;
 
 const app = express();
 
@@ -18,6 +17,6 @@ app.use("/api/session", sessionRouter);
 app.use("/api/home", homeRouter);
 app.use("/api/prediction", predictionRouter);
 
-app.listen(PORT, DOMAIN, () => {
-  console.log(`Server berjalan pada ${DOMAIN}:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server berjalan pada ${PORT}`);
 });

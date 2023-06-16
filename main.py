@@ -4,6 +4,13 @@ from pydantic import BaseModel
 import numpy as np
 import tensorflow as tf
 import tensorflow_hub as hub
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Load environment variables from .env file
+
+# Get the port value from the environment variables or use the default value (8080)
+port = int(os.getenv("PORT", "8080"))
 
 app = FastAPI()
 

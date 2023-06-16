@@ -5,3 +5,4 @@ pydantic
 tensorflow
 tensorflow-hub
 uvicorn
+python-dotenv

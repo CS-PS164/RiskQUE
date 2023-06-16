@@ -9,15 +9,7 @@ const getScoreData = async (req, res) => {
     req.headers.token,
   ]);
 
-  // if(querySession == undefined) {
-  //   const resErr = {
-  //     rc: "01",
-  //     message: "Success Update User data",
-  //   };
-  // }
-
   const id = querySession[0].user_id;
-  console.info(id);
 
   const queryUpdateUser = "UPDATE `users` SET `tipe_risiko` = ? WHERE `id` = ?";
   const updateUser = await db.query(queryUpdateUser, [tipe_risiko, id]);

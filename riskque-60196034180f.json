@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "riskque",
+  "private_key_id": "60196034180ff98fe88f4cc26cfcbb16c0f8be60",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCnRfEB3+ghUA8x\nF1pkC8cnNNnuXS8yVtN6Ol1G2L7hzS/uBkISLH8fEORkWLUik+Z4uqFTbVlyJCgX\nFscEbnsr0lYgwenthAjU2RHWGdVlefmunund+jnRTcvFb9vn3XCClRCI1pCNBsik\nzoexcC9AgnxA/TZ9YbMD9mK7En0Q83Yh9OzJsGt2NprJBv50v4+QF0GkWx7y0B5j\nIW6k9fT6BAo/tbQ5607rfcybdSnout1c1wPtwTP532eMqtey+e5oGkv+s1rQH1HP\nw9roWQanjCTPZ4tKmTAXhh/3qsLQEpJxGeZL9GCr96/M8Mj/j4YOllZ2YLizBF/8\nERIXw+5RAgMBAAECggEAJbMPOuduZ1emXN+RCTxYUb9JIL5SvUsxVXpi/G0sNDLt\nCv3RFUx/CA7kErOle1oPFwWlB2r9Pkrk2DNTfm2yB/HbZH2fzd60qNgVe4YOANVp\nTxBU0Cktr70TYHex/cN8MIoNFHIbWRV+0hoUHgsVMzpVa8ZF6iNDV/DHVrc3hcKj\niL3ZfVBcSmHJEbiXdrWZMVIZpE2bCEnu06qtSzI5AIz8JimvYi39s/cU1/pbSeB4\nDBGs3qde8s+V7WiFYkkNbABgJXfnd46DJXfBH3xdr3WecVD0vF0Gca8orUP+YQpQ\nImK62MLDBAwsmKMtEBp5i5EFfL3B0m0hvGudfPkZmQKBgQDlNk55EoadFAk8sLUO\nIuiNNlLTyBza88veuO0bKIFRbQftUnm1mcSeaM037kYsJSQf/2T2122rNwBgIC1u\nQkSjgNNavPTYaZ18iRrOEUyTLtXc8do+qETJmrgGm/RYVen2mgFVkpMRsUstU3wH\nSscew8qN9tusSjy3CCuXNkDu3QKBgQC60oMrRjJrFc2Z7t5BEEOGisJkr05ep4Rz\nSTlYKMb2MWCpBHY/BAcupwVjh/FPsAZ/K0ZOfexY6dvNF/RoQaLQMWrnRsCQd0R1\nIMHgXvuDz1BhPYmW5UCIYFXyzgw7Zz8Ksy2Vt0OE2ZEWlAwNMLABn3PHormh113W\nbAI3wM4UBQKBgGE7hVR02Gff7P8y0stZYZ8tsTsnw53aF9y2Q9bmet0ozFkPSJQR\n08eDG7MjP99QLh/ovlK8FkiwP1eHrt37/JQDfSUbzR3Ux7rhil5qFjrFfnGIoxU7\nWlrPaEtdcuzaHTLAJ9q+H+c8d3CV3qJVRVy2n8FTO+K9Zz4ZmCxAFpF9AoGAdFoH\nNzxQykCZ+/S4luz6ISDqUKqdtHXAF8zS2gULZOj7ukf9HOH1VyjOQl63+1k1sp3Q\n+7GRMQ70xZbVsNiv/dnJKqD17QNar1fnZ0XAfybueKFKv5+nwUe+P6n0FEsJCDDv\ngv7QHj0iD13E47Ie6+PSx9KgqhrnZlN+ThrWPcECgYAxi4N/VhB1Ezaw2uiF5pbz\nJDy1vEGfzjTewPzIxCGUgglznBcIoiRH6YuJeZJeVEaRqN3PUshELq8lr+iGvP5T\n1/o0tZs/+KlusJQLdLyM8VcyFOZtcOgyNdwLCDWmPdv85JcAdV39bGUsctF6bNd1\nvyHteaUkrd1ppmUaAkKAkA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "riskque-admin@riskque.iam.gserviceaccount.com",
+  "client_id": "103174358603160769399",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/riskque-admin%40riskque.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

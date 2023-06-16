@@ -2,9 +2,9 @@ const mysql = require("mysql2/promise");
 
 const databaseConfig = {
   // connectionLimit: 10,
-  host: "localhost",
+  host: "34.101.253.6",
   user: "root",
-  password: "root",
+  password: "riskque123",
   database: "riskque",
 };
 

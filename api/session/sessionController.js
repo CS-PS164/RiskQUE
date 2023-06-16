@@ -3,6 +3,8 @@ const db = require("./../../config/database");
 const sessionValidation = require("./../validation/sessionValidation");
 const helper = require("./../helper/index");
 const moment = require("moment");
+const { query, getDb } = require("../../config/database");
+
 
 const signup = async (req, res) => {
   try {
@@ -203,7 +205,7 @@ const logout = async (req, res) => {
       rc: "00",
       message: "Berhasil logout",
     };
-    return res.status(400).json(response);
+    return res.status(200).json(response);
   } catch (error) {
     const resErr = {
       rc: "30",

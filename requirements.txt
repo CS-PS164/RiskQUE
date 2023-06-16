@@ -1,0 +1,7 @@
+fastapi
+numpy
+Pillow
+pydantic
+tensorflow
+tensorflow-hub
+uvicorn

@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.bangkit.riskque.data.local.SettingPreferences
 import com.bangkit.riskque.data.local.dataStore
 import com.bangkit.riskque.databinding.FragmentProfileBinding
-import com.bangkit.riskque.ui.auth.AuthActivity
 import com.bangkit.riskque.ui.main.MainActivity
 import com.bangkit.riskque.ui.setting.SettingViewModel
 import com.bangkit.riskque.ui.setting.SettingViewModelFactory
@@ -64,6 +63,7 @@ class ProfileFragment : Fragment() {
         val mPositiveButton = mBuilder.getButton(AlertDialog.BUTTON_POSITIVE)
         mPositiveButton.setOnClickListener {
             settingViewModel.clearLoginSession()
+            settingViewModel.saveThemeSetting(false)
             moveToAuthActivity()
         }
     }

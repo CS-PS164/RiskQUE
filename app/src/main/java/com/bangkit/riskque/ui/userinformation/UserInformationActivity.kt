@@ -12,5 +12,9 @@ class UserInformationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUserInformationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 }

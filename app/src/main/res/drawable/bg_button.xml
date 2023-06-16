@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:state_pressed="true" android:color="?attr/colorOnPrimary">
+    <item android:state_pressed="true" android:color="?attr/colorOnTertiary">
         <shape android:shape="rectangle">
 
-            <solid android:color="?attr/colorPrimary" />
+            <solid android:color="?attr/colorTertiary" />
             <corners android:radius="8dp" />
 
         </shape>
@@ -12,8 +12,8 @@
     </item>
 
     <item>
-        <shape android:shape="rectangle" android:color="?attr/colorOnPrimary">
-            <solid android:color="?attr/colorPrimaryVariant" />
+        <shape android:shape="rectangle" android:color="?attr/colorOnTertiary">
+            <solid android:color="?attr/colorTertiary" />
             <corners android:radius="8dp" />
         </shape>
     </item>

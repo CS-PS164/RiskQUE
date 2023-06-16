@@ -40,19 +40,20 @@ class SplashActivity : AppCompatActivity() {
             SettingViewModelFactory(pref)
         )[SettingViewModel::class.java]
 
-        settingViewModel.getThemeSettings().observe(this) { isDarkModeActive: Boolean ->
-            if (isDarkModeActive) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        with(settingViewModel) {
+            getThemeSettings().observe(this@SplashActivity) { isDarkModeActive: Boolean ->
+                if (isDarkModeActive) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                }
             }
-        }
-
-        settingViewModel.getTokenUser().observe(this) {
-            if (it != null) {
-                splashTo(Intent(this@SplashActivity, MainActivity::class.java))
-            } else {
-                splashTo(Intent(this@SplashActivity, OnBoardActivity::class.java))
+            getTokenUser().observe(this@SplashActivity) {
+                if (it != null) {
+                    splashTo(Intent(this@SplashActivity, MainActivity::class.java))
+                } else {
+                    splashTo(Intent(this@SplashActivity, OnBoardActivity::class.java))
+                }
             }
         }
     }

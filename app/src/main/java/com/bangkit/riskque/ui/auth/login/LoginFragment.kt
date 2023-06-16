@@ -1,8 +1,11 @@
 package com.bangkit.riskque.ui.auth.login
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -27,6 +30,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var email: String
     private lateinit var password: String
+    private var hidePass = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,6 +40,7 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -57,6 +62,15 @@ class LoginFragment : Fragment() {
         }
         binding.apply {
 
+            btnSeePass.setOnClickListener {
+                setVisibilityPassword()
+                if (!hidePass) {
+                    it.setBackgroundResource(R.drawable.ic_eye_open)
+                } else {
+                    it.setBackgroundResource(R.drawable.ic_eye_off)
+                }
+            }
+
             btnLogin.setOnClickListener {
                 email = etLoginEmail.text.toString()
                 password = etLoginPassword.text.toString()
@@ -76,6 +90,15 @@ class LoginFragment : Fragment() {
                 moveToRegister()
             }
         }
+    }
+
+    private fun setVisibilityPassword() {
+        binding.etLoginPassword.apply {
+            transformationMethod =
+                if (hidePass) HideReturnsTransformationMethod.getInstance() else PasswordTransformationMethod.getInstance()
+            setSelection(this.length())
+        }
+        hidePass = !hidePass
     }
 
     private fun moveToRegister() {
@@ -116,6 +139,7 @@ class LoginFragment : Fragment() {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                binding.btnSeePass.visibility = if (p0?.length != 0) View.VISIBLE else View.GONE
                 loginViewModel.apply {
                     setPassOk(binding.etLoginPassword.isPassOk())
                     isButtonEnable()

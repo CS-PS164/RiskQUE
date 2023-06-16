@@ -11,7 +11,7 @@ import com.bangkit.riskque.model.Dplk
 import com.bangkit.riskque.data.database.RemoteKeys
 
 @OptIn(ExperimentalPagingApi::class)
-class StoryRemoteMediator(
+class DplkRemoteMediator(
     private val database: DplkDatabase,
     private val apiService: ApiService,
     private val token: String

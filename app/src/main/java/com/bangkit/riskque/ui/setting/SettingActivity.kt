@@ -23,6 +23,9 @@ class SettingActivity : AppCompatActivity() {
         binding = ActivitySettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnBack.setOnClickListener {
+            onBackPressed()
+        }
 
         val switchTheme = binding.smNightMode
 

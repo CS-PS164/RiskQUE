@@ -12,12 +12,12 @@ import com.bangkit.riskque.model.Dplk
 
 class DplkRepository(private val dplkDatabase: DplkDatabase, private val apiService: ApiService) {
     @OptIn(ExperimentalPagingApi::class)
-    fun getStory(token: String): LiveData<PagingData<Dplk>> {
+    fun getDplk(token: String): LiveData<PagingData<Dplk>> {
         return Pager(
             config = PagingConfig(
                 pageSize = 5
             ),
-            remoteMediator = StoryRemoteMediator(dplkDatabase, apiService, token),
+            remoteMediator = DplkRemoteMediator(dplkDatabase, apiService, token),
             pagingSourceFactory = {
                 dplkDatabase.dplkDao().getAllDplk()
             }

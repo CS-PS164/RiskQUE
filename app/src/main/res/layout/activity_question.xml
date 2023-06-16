@@ -128,6 +128,7 @@
             android:text="1" />
 
         <TextView
+            android:id="@+id/tv_quest_number"
             style="@style/body.small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -138,6 +139,7 @@
         android:id="@+id/btn_next"
         style="@style/button.big"
         android:layout_margin="16dp"
+        android:enabled="false"
         android:background="@drawable/bg_button"
         android:text="@string/selanjutnya"
         app:layout_constraintBottom_toBottomOf="parent"

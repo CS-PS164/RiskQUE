@@ -1,10 +1,12 @@
-package com.rifqi.androintermediate.customView
+package com.bangkit.riskque.views
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
+import android.os.Build
 import android.text.Editable
 import android.text.TextWatcher
+import android.text.method.HideReturnsTransformationMethod
 import android.util.AttributeSet
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText

@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.auth.login.LoginFragment">
 
     <TextView
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.rifqi.androintermediate.customView.EmailForm
+    <com.bangkit.riskque.views.EmailForm
         android:id="@+id/et_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_login" />
 
-    <com.rifqi.androintermediate.customView.PassForm
+    <com.bangkit.riskque.views.PassForm
         android:id="@+id/et_login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +46,19 @@
         android:paddingHorizontal="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_login_email" />
+        app:layout_constraintTop_toBottomOf="@+id/et_login_email"
+        app:passwordToggleEnabled="true" />
+
+    <ImageButton
+        android:id="@+id/btn_see_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_eye_off"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/et_login_password"
+        app:layout_constraintEnd_toEndOf="@+id/et_login_password"
+        app:layout_constraintTop_toTopOf="@+id/et_login_password" />
 
     <Button
         android:id="@+id/btn_login"
@@ -67,16 +79,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
-    <Button
-        android:id="@+id/btn_google"
-        style="@style/button.big"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/bg_button"
-        android:text="@string/google"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/div_body" />
-
     <LinearLayout
         android:id="@+id/ll_register"
         android:layout_width="wrap_content"
@@ -85,7 +87,8 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/div_body">
 
         <TextView
             android:id="@+id/tv_belum_punya"
@@ -98,11 +101,11 @@
         <TextView
             android:id="@+id/tv_register"
             style="@style/title.medium"
-            android:textColor="?attr/colorPrimary"
-            android:layout_marginStart="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register" />
+            android:layout_marginStart="2dp"
+            android:text="@string/register"
+            android:textColor="?attr/colorTertiary" />
     </LinearLayout>
 
     <ProgressBar

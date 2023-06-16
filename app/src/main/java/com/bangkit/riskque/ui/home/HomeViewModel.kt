@@ -14,7 +14,7 @@ import com.bangkit.riskque.model.Dplk
 class HomeViewModel(private val dplkRepository: DplkRepository) : ViewModel() {
 
     fun getListDplk(token: String): LiveData<PagingData<Dplk>> {
-        return dplkRepository.getStory(token).cachedIn(viewModelScope)
+        return dplkRepository.getDplk(token).cachedIn(viewModelScope)
     }
 }
 

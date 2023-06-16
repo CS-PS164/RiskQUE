@@ -2,19 +2,35 @@
 <resources>
 
     <!-- Option 1-->
-    <color name="carmine">#9a031e</color>
-    <color name="carmine_variant">#88051D</color>
-    <color name="carmine_on">#F9D2C8</color>
-    <color name="khaki">#a89b8c</color>
-    <color name="khaki_variant">#786D60</color>
-    <color name="khaki_on">#edf0da</color>
+    <color name="rust">#D66318</color>
+    <color name="rust_on">#FCECD0</color>
+    <color name="rust_container">#F2B371</color>
+    <color name="rust_on_container">#661404</color>
 
-    <color name="dark_purple">#321325</color>
-    <color name="dark_purple_variant">#290A1C</color>
-    <color name="dark_purple_on">#F4D6DB</color>
-    <color name="tyrant_purple">#5f0f40</color>
-    <color name="tyrant_purple_variant">#510935</color>
-    <color name="tyrant_purple_on">#F7CDD6</color>
+    <color name="green">#6F8131</color>
+    <color name="green_on">#F4F8D9</color>
+    <color name="green_container">#CAD988</color>
+    <color name="green_on_container">#394A0F</color>
+
+    <color name="sea">#2DA496</color>
+    <color name="sea_on">#D6FAE8</color>
+    <color name="sea_container">#80E3C5</color>
+    <color name="sea_on_container">#046865</color>
+
+    <color name="darkpurple">#F4D6DB</color>
+    <color name="darkpurple_on">#321325</color>
+    <color name="darkpurple_container">#180317</color>
+    <color name="darkpurple_on_container">#844664</color>
+
+    <color name="blackolive">#F1F4E3</color>
+    <color name="blackolive_on">#292E1E</color>
+    <color name="blackolive_container">#0E1605</color>
+    <color name="blackolive_on_container">#78815F</color>
+
+    <color name="gunmetal">#00272B</color>
+    <color name="gunmetal_on">#C3F4E9</color>
+    <color name="gunmetal_container">#000C14</color>
+    <color name="gunmetal_on_container">#1F7E7F</color>
 
     <color name="error_color1">#B21E28</color>
     <color name="error_color2">#6E0751</color>

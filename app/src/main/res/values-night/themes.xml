@@ -2,19 +2,30 @@
     <!-- Base application theme. -->
     <style name="Theme.RiskQUE" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/dark_purple</item>
-        <item name="colorPrimaryVariant">@color/dark_purple_variant</item>
-        <item name="colorOnPrimary">@color/dark_purple_on</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/tyrant_purple</item>
-        <item name="colorSecondaryVariant">@color/tyrant_purple_variant</item>
-        <item name="colorOnSecondary">@color/tyrant_purple_on</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <item name="android:colorError" tools:targetApi="o">@color/error_color1</item>
+        <item name="colorPrimary">@color/darkpurple</item>
+        <item name="colorOnPrimary">@color/darkpurple_on</item>
+        <item name="colorPrimaryContainer">@color/darkpurple_container</item>
+        <item name="colorOnPrimaryContainer">@color/darkpurple_on_container</item>
 
-        <item name="colorSurface">?attr/colorPrimary</item>
-        <item name="colorOnSurface">?attr/colorOnPrimary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blackolive</item>
+        <item name="colorOnSecondary">@color/blackolive_on</item>
+        <item name="colorSecondaryContainer">@color/blackolive_container</item>
+        <item name="colorOnSecondaryContainer">@color/blackolive_on_container</item>
+
+
+        <!-- Ternary brand color. -->
+        <item name="colorTertiary">@color/gunmetal</item>
+        <item name="colorOnTertiary">@color/gunmetal_on</item>
+        <item name="colorTertiaryContainer">@color/gunmetal_container</item>
+        <item name="colorOnTertiaryContainer">@color/gunmetal_on_container</item>
+
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorOnPrimaryContainer</item>
+
+        <item name="colorSurface">?attr/colorOnPrimary</item>
+        <item name="colorOnSurface">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
     </style>
     <!-- bg color. -->

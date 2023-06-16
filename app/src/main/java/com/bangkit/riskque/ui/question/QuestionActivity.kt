@@ -26,35 +26,42 @@ class QuestionActivity : AppCompatActivity() {
         binding = ActivityQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnPrev.setOnClickListener {
-            viewModel.getPrev()
-        }
-
-        viewModel.questNumber.observe(this) {
-            quest = generateDataQuestion(it)
+        viewModel.questNumber.observe(this) { index ->
+            quest = generateDataQuestion(index)
 
             binding.apply {
-                tvPageNumber.text = "${it + 1}"
+                tvPageNumber.text = "${index + 1}"
 
-                btnPrev.visibility = if (it != 0) View.VISIBLE else View.GONE
-
-                if (it != 7) {
-                    btnNext.text = resources.getString(R.string.selanjutnya)
-                    btnNext.setOnClickListener {
-                        rgQuestion.clearCheck()
-                        viewModel.getNext()
+                btnPrev.apply {
+                    setOnClickListener {
+                        viewModel.getPrev()
+                        setCheckRadioButton(viewModel.getPoint(index))
                     }
-                } else {
-                    btnNext.text = resources.getString(R.string.selesai)
-                    btnNext.setOnClickListener {
-                        moveToRiskTypeActivity(viewModel.getTotalPoint())
-                    }
+                    visibility = if (index != 0) View.VISIBLE else View.GONE
                 }
 
-
+                btnNext.apply {
+                    if (index != 7) {
+                        tvQuestNumber.setTextColor(getColor(R.color.black))
+                        tvPageNumber.setTextColor(getColor(R.color.black))
+                        text = resources.getString(R.string.selanjutnya)
+                        setOnClickListener {
+                            rgQuestion.clearCheck()
+                            viewModel.getNext()
+                            isEnabled = false
+                        }
+                    } else {
+                        tvQuestNumber.setTextColor(getColor(R.color.sea))
+                        tvPageNumber.setTextColor(getColor(R.color.sea))
+                        text = resources.getString(R.string.selesai)
+                        setOnClickListener {
+                            moveToRiskTypeActivity(viewModel.getTotalPoint())
+                        }
+                    }
+                }
                 tvQuestion.text = quest.quest
 
-                if (it < 5) {
+                if (index < 5) {
                     rbAnswer1.text = quest.option[0].answer
                     rbAnswer2.text = quest.option[1].answer
                     rbAnswer3.text = quest.option[2].answer
@@ -72,10 +79,27 @@ class QuestionActivity : AppCompatActivity() {
         }
     }
 
+    private fun setCheckRadioButton(point: Int) {
+        binding.apply {
+            btnNext.isEnabled = true
+            when (point) {
+                1 -> rbAnswer1.isChecked = true
+                2 -> rbAnswer2.isChecked = true
+                3 -> rbAnswer3.isChecked = true
+                4 -> rbAnswer4.isChecked = true
+                5 -> rbAnswer5.isChecked = true
+            }
+        }
+
+    }
+
     fun onRadioButtonClicked(view: View) {
         if (view is RadioButton) {
             // Is the button now checked?
             val checked = view.isChecked
+
+            //active next btn
+            binding.btnNext.isEnabled = true
 
             // Check which radio button was clicked
             when (view.getId()) {

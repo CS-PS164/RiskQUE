@@ -2,20 +2,33 @@
     <!-- Base application theme. -->
     <style name="Theme.RiskQUE" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/carmine</item>
-        <item name="colorPrimaryVariant">@color/carmine_variant</item>
-        <item name="colorOnPrimary">@color/carmine_on</item>
+        <item name="colorPrimary">@color/rust</item>
+        <item name="colorOnPrimary">@color/rust_on</item>
+        <item name="colorPrimaryContainer">@color/rust_container</item>
+        <item name="colorOnPrimaryContainer">@color/rust_on_container</item>
+
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/khaki</item>
-        <item name="colorSecondaryVariant">@color/khaki_variant</item>
-        <item name="colorOnSecondary">@color/khaki_on</item>
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorOnSecondary">@color/green_on</item>
+        <item name="colorSecondaryContainer">@color/green_container</item>
+        <item name="colorOnSecondaryContainer">@color/green_on_container</item>
+
+
+        <!-- Ternary brand color. -->
+        <item name="colorTertiary">@color/sea</item>
+        <item name="colorOnTertiary">@color/sea_on</item>
+        <item name="colorTertiaryContainer">@color/sea_container</item>
+        <item name="colorOnTertiaryContainer">@color/sea_on_container</item>
+
 
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <item name="android:colorError" tools:targetApi="o">@color/error_color2</item>
+        <item name="android:statusBarColor">?attr/colorOnPrimaryContainer</item>
 
         <item name="colorSurface">?attr/colorOnPrimary</item>
         <item name="colorOnSurface">?attr/colorPrimary</item>
+
+
+        <item name="android:colorError" tools:targetApi="o">@color/error_color2</item>
         <!-- Customize your theme here. -->
     </style>
     <!-- bg color. -->

@@ -24,6 +24,10 @@ class QuestionViewModel : ViewModel() {
         _point.value?.set(_questNumber.value!!, point)
     }
 
+    fun getPoint(index: Int): Int {
+        return point.value?.get(index) ?: 0
+    }
+
     fun getTotalPoint(): Int {
         var result = 0
         for (num in point.value!!) {

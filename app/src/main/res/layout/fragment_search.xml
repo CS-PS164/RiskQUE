@@ -30,4 +30,14 @@
         app:layout_constraintTop_toTopOf="parent">
     </com.google.android.material.search.SearchView>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dplk"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

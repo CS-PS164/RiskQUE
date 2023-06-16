@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    style="@style/backgroundsetting"
     android:layout_height="match_parent"
     tools:context=".ui.userinformation.UserInformationActivity">
 
@@ -10,8 +11,8 @@
         android:id="@+id/ll_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/white"
         android:orientation="horizontal"
+        style="@style/onbackgroundsetting"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
-            android:background="@color/white"
+            style="@style/onbackgroundsetting"
             android:src="@drawable/ic_arrow_left" />
 
         <TextView
@@ -39,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="64dp"
-        android:background="@color/white"
+        style="@style/onbackgroundsetting"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +58,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="UzumakiNaruto@gmail.com" />
+            android:text="baraifqiA@gmail.com" />
 
 
     </LinearLayout>
@@ -72,7 +73,7 @@
         android:id="@+id/ll_password"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/white"
+        style="@style/onbackgroundsetting"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,18 +87,19 @@
             android:src="@drawable/ic_lock" />
 
         <TextView
+            android:id="@+id/tv_password"
             style="@style/body.small"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="************" />
+            android:text="********" />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/btn_see_pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_eye_open" />
-
+            android:background="@drawable/ic_eye_off"/>
     </LinearLayout>
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"

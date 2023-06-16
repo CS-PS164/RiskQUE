@@ -48,7 +48,7 @@ class DplkListAdapter :
 
         fun bind(data: Dplk) {
             binding.apply {
-                tvDplkName.text = "data.name"
+                tvDplkName.text = data.name
                 tv1YearReturnData.text = data.lon.toString()
                 tvExpenseRatioData.text = data.lon.toString()
                 tvTotalAumData.text = data.lon.toString()

@@ -40,14 +40,14 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.rvDplk.layoutManager = LinearLayoutManager(requireContext())
+        //binding.rvDplk.layoutManager = LinearLayoutManager(requireContext())
 
         val pref = SettingPreferences.getInstance((activity as MainActivity).dataStore)
         val settingViewModel = ViewModelProvider(
             requireActivity(), SettingViewModelFactory(pref)
         )[SettingViewModel::class.java]
 
-        generateData("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLTNucFV4Q29hRlVwWEgxUjgiLCJpYXQiOjE2ODY4MTU2NDh9.vEq-vykCE85gcbYYsj0gdBSiCBQHvMKUfGY6hDPyct0")
+        //generateData("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLTNucFV4Q29hRlVwWEgxUjgiLCJpYXQiOjE2ODY4MTU2NDh9.vEq-vykCE85gcbYYsj0gdBSiCBQHvMKUfGY6hDPyct0")
     }
 
     private fun generateData(token: String) {

@@ -63,11 +63,11 @@ class OnBoardActivity : AppCompatActivity() {
     private fun setOnBoardItems() : List<OnBoardItem> {
         return listOf(
             OnBoardItem(
-                R.drawable.on_board_1,getString(R.string.title1), getString(R.string.description1)
+                R.drawable.onboarding_1,getString(R.string.title1), getString(R.string.description1)
             ), OnBoardItem(
-                R.drawable.on_board_2,getString(R.string.title2), getString(R.string.description2)
+                R.drawable.onboarding_2,getString(R.string.title2), getString(R.string.description2)
             ), OnBoardItem(
-                R.drawable.on_board_3,getString(R.string.title3), getString(R.string.description3)
+                R.drawable.onboarding_3,getString(R.string.title3), getString(R.string.description3)
             )
         )
     }

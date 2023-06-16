@@ -1,5 +1,6 @@
 package com.bangkit.riskque.utils
 
+import com.bangkit.riskque.R
 import com.bangkit.riskque.model.Answer
 import com.bangkit.riskque.model.Quest
 
@@ -9,6 +10,7 @@ object DataDummy {
 
         quests.add(
             Quest(
+                R.drawable.quest_1,
                 "Seberapa jauh pengetahuan Anda tentang konsep keuangan dan investasi?",
                 listOf(
                     Answer("Sama sekali tidah tahu apa-apa"),
@@ -22,6 +24,7 @@ object DataDummy {
 
         quests.add(
             Quest(
+                R.drawable.quest_2,
                 "Seberapa banyak pengalaman yang Anda miliki dengan produk investasi?",
                 listOf(
                     Answer("Belum punya pengalaman"),
@@ -35,6 +38,7 @@ object DataDummy {
 
         quests.add(
             Quest(
+                R.drawable.quest_3,
                 "Berapa toleransi risiko atau kesediaan Anda untuk mengambil risiko keuangan?",
                 listOf(
                     Answer("Sangat rendah"),
@@ -48,6 +52,7 @@ object DataDummy {
 
         quests.add(
             Quest(
+                R.drawable.quest_4,
                 "Apa preferensi Anda ketika memegang aset berisiko?",
                 listOf(
                     Answer("Memaksimalkan keamanan"),
@@ -61,6 +66,7 @@ object DataDummy {
 
         quests.add(
             Quest(
+                R.drawable.quest_5,
                 "Apa persepsi Anda tentang risiko pasar saham?",
                 listOf(
                     Answer("Sangat berisiko"),
@@ -74,6 +80,7 @@ object DataDummy {
 
         quests.add(
             Quest(
+                R.drawable.quest_6,
                 "Di masa lalu, ketika mengalami kerugian investasi, tindakan apa yang Anda lakukan?",
                 listOf(
                     Answer("Menjual investasi"),
@@ -85,6 +92,7 @@ object DataDummy {
 
         quests.add(
             Quest(
+                R.drawable.quest_7,
                 "Dari seluruh aset Anda, berapa persen yang Anda rencanakan untuk diinvestasikan pada Aset Berkembang (ekuitas dan alternatif)?",
                 listOf(
                     Answer("Kurang dari 30%"),
@@ -96,6 +104,7 @@ object DataDummy {
 
         quests.add(
             Quest(
+                R.drawable.quest_8,
                 "Berapa lama jangka waktu rencana investasi Anda?",
                 listOf(
                     Answer("Kurang dari atau sama dengan 5 tahun"),

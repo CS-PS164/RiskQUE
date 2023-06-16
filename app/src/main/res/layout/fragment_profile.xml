@@ -2,27 +2,28 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/backgroundsetting"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".ui.profile.ProfileFragment">
 
     <ImageView
         android:id="@+id/iv_background_profile"
+        style="@style/appBarStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        style="@style/appBarStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/iv_user_photo"
+        android:id="@+id/iv_risk_type"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:background="@drawable/bg_circle_button"
+        android:src="@drawable/ic_agresif"
+        android:background="@drawable/bg_circle_risk_type"
         app:layout_constraintBottom_toBottomOf="@+id/iv_background_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,10 +34,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:text="Bara Rifqi A"
         android:textColor="?attr/colorOnPrimary"
-        android:text="Uzumaki Naruto"
-        app:layout_constraintStart_toEndOf="@id/iv_user_photo"
-        app:layout_constraintTop_toTopOf="@id/iv_user_photo" />
+        app:layout_constraintStart_toEndOf="@id/iv_risk_type"
+        app:layout_constraintTop_toTopOf="@id/iv_risk_type" />
 
     <TextView
         android:id="@+id/tv_investor"
@@ -44,28 +45,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:text="Investor Agresif"
         android:textColor="?attr/colorOnPrimary"
-        android:text="Investor "
-        app:layout_constraintBottom_toBottomOf="@id/iv_user_photo"
-        app:layout_constraintStart_toEndOf="@id/iv_user_photo" />
-
-    <TextView
-        android:id="@+id/tv_type_risk_user"
-        style="@style/body.small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="?attr/colorOnPrimary"
-        android:text="Moderat"
-        app:layout_constraintBottom_toBottomOf="@id/iv_user_photo"
-        app:layout_constraintStart_toEndOf="@id/tv_investor" />
+        app:layout_constraintBottom_toBottomOf="@id/iv_risk_type"
+        app:layout_constraintStart_toEndOf="@id/iv_risk_type" />
 
 
     <LinearLayout
         android:id="@+id/ll_user_info"
+        style="@style/onbackgroundsetting"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
-        android:background="@color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,18 +83,20 @@
             android:src="@drawable/ic_chevron_right" />
 
     </LinearLayout>
+
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:translationZ="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_user_info" />
+
     <LinearLayout
         android:id="@+id/ll_setting"
+        style="@style/onbackgroundsetting"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,18 +123,20 @@
             android:src="@drawable/ic_chevron_right" />
 
     </LinearLayout>
+
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:translationZ="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_setting" />
+
     <LinearLayout
         android:id="@+id/ll_faq"
+        style="@style/onbackgroundsetting"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -168,21 +163,22 @@
             android:src="@drawable/ic_chevron_right" />
 
     </LinearLayout>
+
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:translationZ="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_faq" />
 
     <LinearLayout
         android:id="@+id/ll_log_out"
+        style="@style/onbackgroundsetting"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/white"
-        android:gravity="center_vertical"
         android:layout_marginTop="56dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -202,11 +198,12 @@
             android:text="Logout" />
 
     </LinearLayout>
+
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:translationZ="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_log_out" />
 </androidx.constraintlayout.widget.ConstraintLayout>

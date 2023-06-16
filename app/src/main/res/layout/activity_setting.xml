@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/backgroundsetting"
     tools:context=".ui.setting.SettingActivity">
 
     <LinearLayout
         android:id="@+id/ll_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/white"
+        style="@style/onbackgroundsetting"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
-            android:background="@color/white"
+            style="@style/onbackgroundsetting"
             android:src="@drawable/ic_arrow_left" />
 
         <TextView
@@ -40,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="64dp"
-        android:background="@color/white"
+        style="@style/onbackgroundsetting"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +80,7 @@
         android:id="@+id/ll_language"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/white"
+        style="@style/onbackgroundsetting"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"

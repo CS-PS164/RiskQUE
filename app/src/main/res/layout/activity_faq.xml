@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/backgroundsetting"
     tools:context=".ui.faq.FaqActivity">
 
     <LinearLayout
         android:id="@+id/ll_tool_bar"
         android:layout_width="match_parent"
+        style="@style/onbackgroundsetting"
         android:layout_height="80dp"
         android:background="@color/white"
         android:orientation="horizontal"
@@ -22,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
-            android:background="@color/white"
+            style="@style/onbackgroundsetting"
             android:src="@drawable/ic_arrow_left" />
 
         <TextView

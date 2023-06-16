@@ -59,6 +59,7 @@ class QuestionActivity : AppCompatActivity() {
                         }
                     }
                 }
+                ivQuestionImage.setImageResource(quest.image)
                 tvQuestion.text = quest.quest
 
                 if (index < 5) {

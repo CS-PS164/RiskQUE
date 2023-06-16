@@ -11,9 +11,9 @@ MODEL = tf.keras.models.load_model("./model.h5", custom_objects = {"KerasLayer" 
 CLASS_NAMES = ['Konservatif', 'Moderat', 'Agresif']
 
 class Dplk(BaseModel):
-    saham: Optional[float] = 0
     pasar_uang: Optional[float] = 0
     obligasi: Optional[float] = 0
+    saham: Optional[float] = 0
     bulan_1: Optional[float] = 0
     bulan_3: Optional[float] = 0
     bulan_6: Optional[float] = 0
@@ -26,12 +26,11 @@ class Dplk(BaseModel):
 def read_root():
     return {"Hello": "World"}
 
-@app.post('/predict/')
+@app.post('/predict')
 async def predict(req: Dplk):
-
     X_input = list(req.dict().values())
     print(X_input)
-    prediction = MODEL.predict(X_input)
+    prediction = MODEL.predict([X_input])
     prediction = np.argmax(prediction)
 
     return {"input": X_input, "prediction": CLASS_NAMES[prediction]}
